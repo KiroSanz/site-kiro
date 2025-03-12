@@ -1,0 +1,28 @@
+{
+  "name": "nova-pasta",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiroSanz/Nova-pasta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiroSanz/Nova-pasta/issues"
+  },
+  "homepage": "https://github.com/KiroSanz/Nova-pasta#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "nodemailer": "^6.10.0",
+    "nova-pasta": "file:"
+  }
+}
