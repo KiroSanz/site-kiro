@@ -154,6 +154,41 @@
         document.getElementById('menuIcon').addEventListener('click', function() {
             var menu = document.querySelector('.menu-desktop ul');
             menu.classList.toggle('active');
+
+        });
+        document.getElementById('formOrcamento').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Substitua 'YOUR_FORM_ID' pelo seu ID real do Formspree
+            const formspreeUrl = 'https://formspree.io/f/xvgkbkab';
+            
+            const formData = new FormData(this);
+            
+            fetch(formspreeUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Mostra mensagem de sucesso
+                    document.getElementById('mensagem-sucesso').style.display = 'block';
+                    // Limpa o formulário
+                    document.getElementById('formOrcamento').reset();
+                    // Esconde a mensagem após 5 segundos
+                    setTimeout(() => {
+                        document.getElementById('mensagem-sucesso').style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Erro ao enviar formulário');
+                }
+            })
+            .catch(error => {
+                alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente mais tarde.');
+                console.error('Erro:', error);
+            });
         });
     </script>
     <script src="script.js"></script>
