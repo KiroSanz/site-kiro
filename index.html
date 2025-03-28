@@ -130,13 +130,16 @@
         <section class="formulario">
             <div id="formulario" class="interface">
                 <h2 class="titulo">RECEBA UM <span>ORÇAMENTO</span></h2>
-                <form action="https://formspree.io/f/xvgkbkab" method="POST">
-                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
-                    <textarea name="" id="" placeholder="Sua mensagem:" required></textarea>
+                <form action="https://formspree.io/f/xvgkbkab" method="POST" id="formOrcamento">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <input type="tel" name="celular" id="celular" placeholder="Seu celular:">
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem:" required></textarea>
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
+                <div id="mensagem-sucesso" style="display: none; margin-top: 20px; padding: 10px; background: #4CAF50; color: white; text-align: center; border-radius: 5px;">
+                    Mensagem enviada com sucesso!
+                </div>
             </div>
         </section><!--formulario-->
 
@@ -154,14 +157,13 @@
         document.getElementById('menuIcon').addEventListener('click', function() {
             var menu = document.querySelector('.menu-desktop ul');
             menu.classList.toggle('active');
-
         });
+
+        // Form submission
         document.getElementById('formOrcamento').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Substitua 'YOUR_FORM_ID' pelo seu ID real do Formspree
-            const formspreeUrl = 'https://formspree.io/f/xvgkbkab';
-            
+            const formspreeUrl = this.action;
             const formData = new FormData(this);
             
             fetch(formspreeUrl, {
@@ -176,7 +178,7 @@
                     // Mostra mensagem de sucesso
                     document.getElementById('mensagem-sucesso').style.display = 'block';
                     // Limpa o formulário
-                    document.getElementById('formOrcamento').reset();
+                    this.reset();
                     // Esconde a mensagem após 5 segundos
                     setTimeout(() => {
                         document.getElementById('mensagem-sucesso').style.display = 'none';
