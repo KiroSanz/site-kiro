@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 1 | Meu Portfólio</title>
+    <link rel="stylesheet" href="projeto 1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fundo de hexágonos animado -->
+    <div class="hexagon-background" id="hexagonBackground"></div>
+    
+    <!-- Elementos flutuantes de background -->
+    <div class="floating-element">✧</div>
+    <div class="floating-element">✦</div>
+    <div class="floating-element">✶</div>
+    <div class="floating-element">✸</div>
+    
+    <!-- Ícones flutuantes -->
+    <i class="floating-icon html">&#xE6ED;</i>
+    <i class="floating-icon css">&#xE6E3;</i>
+    <i class="floating-icon js">&#xE74E;</i>
+    <i class="floating-icon react">&#xE7BA;</i>
+    
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">
+                <img src="/img/logoheader2.png" alt="logo"></img>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/index.html#sobre">Sobre</a></li>
+                    <li><a href="/index.html#portfolio">Projetos</a></li>
+                    <li><a href="https://wa.me/+5515996783631" target="_blank">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="project-header">
+            <h1>Site Gika</h1>
+            <p>Projeto feito para minha namorada no nosso aniversário de 3 meses.</p>
+        </section>
+
+        <section class="project-content">
+            <div class="project-image">
+                <img src="/img/projeto_1.png" alt="Imagem do Projeto 1">
+                <div class="overlay">Site Gika</div>
+            </div>
+            
+            <div class="project-details">
+                <h2>Sobre o Projeto</h2>
+                <p>Esse projeto foi utilizados varios codigos de Html, para fazer todo o esqueleto do site, então entrei com o JavaScript dando funcionalidade as coisas, além também do CSS3 para fornecer estilo e deixar a pagina mais aconchegante, desta forma mantendo a beleza e transmitindo todo o amor e mensagem que eu queria</p>
+                <p>Foi um dos meus primeiros projetos, dei inicio a ele no começo da faculdade, usei o mesmo para me aprofundar no font-end e agora estou migrando para o backend com destino a ser full stack, aprendi sobre React e JavaScript nesse codigo, para saber mais sobre ele é só olhar aqui embaixo.</p>
+                
+                <h2>Tecnologias Utilizadas</h2>
+                <div class="tech-list">
+                    <span class="tech-item">HTML</span>
+                    <span class="tech-item">CSS</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Node.js</span>
+                </div>
+                
+                <h2>Links</h2>
+                <div class="project-links">
+                    <a href="https://gika.vercel.app" target="_blank"><i class="fas fa-eye"></i> Ver ao vivo</a>
+                    <a href="https://github.com/KiroSanz/gika/" target="_blank"><i class="fab fa-github"></i> Código no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-gallery">
+            <h2>Mais Imagens do Projeto</h2>
+            <div class="gallery">
+                <img src="/img/imagem projeto texto.png" alt="Imagem 1 do projeto">
+                <img src="/img/video com controlador.png" alt="Imagem 3 do projeto">
+            </div>
+        </section>
+            <!-- ... -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> I.S.B . Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="hexagono.js"></script>
+    <script>
+        // Atualiza o ano no footer automaticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
