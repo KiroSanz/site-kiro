@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2 | Meu Portfólio</title>
+    <link rel="stylesheet" href="projeto 2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Fundo de hexágonos animado -->
+    <div class="hexagon-background" id="hexagonBackground"></div>
+    
+    <!-- Elementos flutuantes de background -->
+    <div class="floating-element">✧</div>
+    <div class="floating-element">✦</div>
+    <div class="floating-element">✶</div>
+    <div class="floating-element">✸</div>
+    
+    <!-- Ícones flutuantes -->
+    <i class="floating-icon html">&#xE6ED;</i>
+    <i class="floating-icon css">&#xE6E3;</i>
+    <i class="floating-icon js">&#xE74E;</i>
+    <i class="floating-icon react">&#xE7BA;</i>
+    
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">
+                <img src="/img/logoheader2.png" alt="logo"></img>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/index.html#sobre">Sobre</a></li>
+                    <li><a href="/index.html#portfolio">Projetos</a></li>
+                    <li><a href="https://wa.me/+5515996783631" target="_blank">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="project-header">
+            <h1>Giovanna Albuquerque</h1>
+            <br>
+                <h2>Arquitetura | Interiores </h2>
+            <p>Site desenvolvido para ser um portfólio incluindo projetos.</p>
+        </section>
+
+        <section class="project-content">
+            <div class="project-image">
+                <div><a href="https://www.arquitetagioalbuquerque.com/" target="_blank">
+                <img src="/img/arqgika.png" alt="Imagem do Projeto 1"></a></div>
+                <div class="overlay">Giovanna Arquiteta</div> 
+            </div>
+            
+            <div class="project-details">
+                <h2>Sobre o Projeto</h2>
+                <p>Esse projeto foi utilizados varios codigos de Html, para fazer todo o esqueleto do site, então entrei com o JavaScript dando funcionalidade as coisas, além também do CSS3 para fornecer estilo e deixar a pagina mais aconchegante, desta forma mantendo a beleza e transmitindo a seriedade e profissionalismo </p>
+                <p>Foi uma das minhas primeiras vendas, iniciei o desenvolvimento dele no final de 2024 e o entreguei com todas as funcionalidades semanas após, aprendi sobre Banco de Dados, formulários e outras coisas nesse codigo, para saber mais sobre ele é só olhar aqui embaixo.</p>
+                
+                <h2>Tecnologias Utilizadas</h2>
+                <div class="tech-list">
+                    <span class="tech-item">HTML</span>
+                    <span class="tech-item">CSS</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">Formsfree</span>
+                    <span class="tech-item">Banco de Dados</span>
+                </div>
+                
+                <h2>Links</h2>
+                <div class="project-links">
+                    <a href="https://www.arquitetagioalbuquerque.com/ target="_blank"><i class="fas fa-eye"></i> Ver ao vivo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-gallery">
+            <h2>Mais Imagens do Projeto</h2>
+            <div class="gallery">
+                <img src="/img/Formulário.png" alt="Imagem 1 do projeto">
+                <img src="/img/Projeto site giovanna .png" alt="Imagem 3 do projeto">
+            </div>
+        </section>
+            <!-- ... -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> I.S.B . Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="hexagono.js"></script>
+    <script>
+        // Atualiza o ano no footer automaticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
